@@ -1,14 +1,14 @@
 ## config valid only for current version of Capistrano
 lock '3.6.0'
 # デプロイするアプリケーション名
-set :application, 'achieve'
+set :application, 'blogapp'
 # cloneするgitのレポジトリ
 # （xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/miya-hi/assignment_16.git'
+set :repo_url, 'https://github.com/miya-hi/assignment_16'
 # deployするブランチ。デフォルトでmainを使用している場合、masterをmainに変更してください。
 set :branch, ENV['BRANCH'] || 'master'
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/achieve'
+set :deploy_to, '/var/www/blogapp'
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
